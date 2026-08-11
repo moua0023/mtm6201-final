@@ -1,0 +1,94 @@
+/* CSS Custom Properties Overriding Bootstrap Defaults */
+:root {
+  --bs-primary: #5a5a5a;
+  --bs-primary-hover: #333333;
+  --bs-body-bg: #ffffff;
+  --bs-body-color: #212529;
+  --bs-font-sans-serif: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --heading-font-family: 'Impact', 'Arial Black', sans-serif;
+}
+
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: #000;
+  color: #fff;
+  padding: 8px 16px;
+  z-index: 1050;
+  transition: top 0.2s ease-in-out;
+}
+
+.skip-link:focus {
+  top: 0;
+}
+
+/* Custom Font Style matching layout headings */
+.custom-heading {
+  font-family: var(--heading-font-family);
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* Transitions for Buttons & Links */
+a, .btn {
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-custom {
+  background-color: #d3d3d3;
+  color: #000000;
+  border: 1px solid #999999;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-family: var(--heading-font-family);
+}
+
+.btn-custom:hover, 
+.btn-custom:focus {
+  background-color: var(--bs-primary-hover);
+  color: #ffffff;
+  border-color: #000000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.btn-dark-custom {
+  background: linear-gradient(180deg, #b0b0b0 0%, #666666 100%);
+  color: #000000;
+  border: 1px solid #444444;
+  border-radius: 0;
+  font-family: var(--heading-font-family);
+}
+
+.btn-dark-custom:hover,
+.btn-dark-custom:focus {
+  background: linear-gradient(180deg, #444444 0%, #111111 100%);
+  color: #ffffff;
+}
+
+/* Custom Form Fields matching wireframe */
+.custom-input {
+  background-color: #e0e0e0;
+  border: 1px solid #a6a6a6;
+  border-radius: 0;
+}
+
+.custom-input:focus {
+  background-color: #ffffff;
+  border-color: #333333;
+  box-shadow: 0 0 0 0.25rem rgba(0, 0, 0, 0.15);
+}
+
+/* Section Spacing */
+.content-section {
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+/* Image adjustments */
+.img-fit {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
